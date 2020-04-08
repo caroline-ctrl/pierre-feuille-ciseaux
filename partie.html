@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap-4.3.1-dist/js/bootstrap.js" rel="stylesheet" media="screen" type="text/css" />
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" media="screen" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Régles du jeu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/partie.html">Nouvelle partie</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h1 class="mt-4">Nouvelle partie</h1>
+        <p>Cliquez sur une image pour commencer à jouer !</p>
+        <main onclick="test()">
+            <img  id="img1" class="rounded" src="/images/caillou.png" alt="caillou" value="pierre">
+            <img  id="img2" class="rounded" src="/images/papier.PNG" alt="papier" value="feuille">
+            <img  id="img3" class="rounded" src="/images/ciseaux.PNG" alt="ciseaux" value="ciseaux">
+        </main>
+        
+        <table class="mt-5">
+            <tr>
+                <th>Votre réponse est : </th>
+                <td id="perso"></td>
+            </tr>
+            <tr class="mt-4">
+                <th>La réponse de l'ordinateur est : </th>
+                <td id="ordi"></td>
+            </tr>
+        </table>
+
+        <h2 id="result"></h2>
+
+
+        <!-- <a href="/partie.html"><button type="button" class="btn btn-success">Nouvelle partie</button></a> -->
+
+
+    </div>
+
+
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
