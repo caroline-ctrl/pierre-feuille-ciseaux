@@ -11,28 +11,39 @@ function test() {
     document.getElementById('ordi').innerHTML = tab[newWord]
 
 
+    let scorePerso = 0
+    let scoreOrdi = 0
     
     if (document.getElementById("perso").textContent == document.getElementById("ordi").textContent){
         document.getElementById("result").innerHTML = "égalité"
 
     } else if ((document.getElementById("perso").textContent == "pierre") && (document.getElementById("ordi").textContent == "ciseaux")){
         document.getElementById("result").innerHTML = "Vous avez 1 point : La pierre broie les ciseaux"
+        scorePerso += 1
 
     } else if ((document.getElementById("perso").textContent == "pierre") && (document.getElementById("ordi").textContent == "feuille")){
-        document.getElementById("result").innerHTML = "Vous avez perdu : La feuille enveloppe la pierre"
+        document.getElementById("result").innerHTML = "Vous perdez le point : La feuille enveloppe la pierre"
+        scoreOrdi += 1
 
     } else if ((document.getElementById("perso").textContent == "feuille") && (document.getElementById("ordi").textContent == "pierre")){
         document.getElementById("result").innerHTML = "Vous avez 1 point : La feuille enveloppe la pierre"
+        scorePerso += 1
 
     } else if ((document.getElementById("perso").textContent == "feuille") && (document.getElementById("ordi").textContent == "ciseaux")){
-        document.getElementById("result").innerHTML = "Vous avez perdu : Les ciseaux coupent la feuille"
+        document.getElementById("result").innerHTML = "Vous perdez le point : Les ciseaux coupent la feuille"
+        scoreOrdi += 1
 
     } else if ((document.getElementById("perso").textContent == "ciseaux") && (document.getElementById("ordi").textContent == "pierre")){
-        document.getElementById("result").innerHTML = "Vous avez perdu : La pierre broie les ciseaux"
+        document.getElementById("result").innerHTML = "Vous perdez le point : La pierre broie les ciseaux"
+        scoreOrdi += 1
 
     } else if ((document.getElementById("perso").textContent == "ciseaux") && (document.getElementById("ordi").textContent == "feuille")){
         document.getElementById("result").innerHTML = "Vous avez 1 point : Les ciseaux coupent la feuille"
+        scorePerso += 1
     }
+
+    document.getElementById('scorePerso').innerHTML = scorePerso
+    document.getElementById('scoreOrdi').innerHTML = scoreOrdi
 
 }
 
@@ -65,3 +76,5 @@ document.getElementById("img3").addEventListener('click', () => {
 }, {
     once: true,
 })
+
+
