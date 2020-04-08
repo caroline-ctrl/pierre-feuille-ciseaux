@@ -31,41 +31,46 @@
 
     <div class="container">
 
-        <h1 class="mt-4">Nouvelle partie</h1>
-        <p>Cliquez sur une image pour commencer à jouer !</p>
-        <main onclick="test()">
-            <img  id="img1" class="rounded" src="/images/caillou.png" alt="caillou" value="pierre">
-            <img  id="img2" class="rounded" src="/images/papier.PNG" alt="papier" value="feuille">
-            <img  id="img3" class="rounded" src="/images/ciseaux.PNG" alt="ciseaux" value="ciseaux">
-        </main>
-        
-        <table class="mt-5">
-            <tr>
-                <th>Votre réponse est : </th>
-                <td id="perso"></td>
-            </tr>
-            <tr class="mt-4">
-                <th>La réponse de l'ordinateur est : </th>
-                <td id="ordi"></td>
-            </tr>
-        </table>
+        <div id="nbrparty">
+            <h1 class="mt-4">Choisissez le nombre de manche</h1>
+            <button onclick="choice(1)" type="submit" class="btn btn-info">1</button>
+            <button onclick="choice(2)" type="submit" class="btn btn-success">2</button>
+            <button onclick="choice(3)" type="submit" class="btn btn-warning">3</button>
+            <button onclick="choice(4)" type="submit" class="btn btn-danger">4</button>
+            <button onclick="choice(5)" type="submit" class="btn btn-dark">5</button>
+        </div>
 
-        <h2 id="result"></h2>
+        <div id="contentCart">
+            <h1 class="mt-4">Nouvelle partie</h1>
+            <h4>Vous avez choisi une partie en <span id="choiceParty"></span> manches !</h4>
+            <p>Cliquez sur une image pour commencer à jouer !</p>
+            <main>
+                <img onclick="choicePerso('PIERRE')" class="rounded" src="/images/caillou.png" alt="caillou" value="pierre">
+                <img onclick="choicePerso('FEUILLE')" class="rounded" src="/images/papier.PNG" alt="papier" value="feuille">
+                <img onclick="choicePerso('CISEAUX')" class="rounded" src="/images/ciseaux.PNG" alt="ciseaux" value="ciseaux">
+            </main>
 
-        <table class="mt-5">
-            <tr>
-                <th>Votre score : </th>
-                <td id="scorePerso"></td>
-            </tr>
-            <tr class="mt-4">
-                <th>Score de l'ordinateur : </th>
-                <td id="scoreOrdi"></td>
-            </tr>
-        </table>
+            <table class="mt-5">
+                <tr>
+                    <th>Votre réponse est : <i><span id="carte"></span></i></th>
+                </tr>
+                <tr class="mt-4">
+                    <th>La réponse de l'ordinateur est : <i><span id="carteOrdi"></span></i></th>
+                </tr>
+            </table>
 
-        <!-- <a href="/partie.html"><button type="button" class="btn btn-success">Nouvelle partie</button></a> -->
+            <h2 id="result"></h2>
 
+            <table class="mt-5">
+                <tr>
+                    <th>Votre score : <i><span id="scorePerso"></span></i></th>
+                </tr>
+                <tr class="mt-4">
+                    <th>Score de l'ordinateur : <i><span id="scoreOrdi"></span></i></th>
+                </tr>
+            </table>
 
+        </div>
     </div>
 
 
